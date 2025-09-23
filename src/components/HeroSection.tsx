@@ -4,6 +4,14 @@ import React from "react";
 import Image from "next/image";
 
 const HeroSection: React.FC = () => {
+  const handleStartNow = () => {
+    const launchpassUrl =
+      "https://www.launchpass.com/emg---elevation-mentorship-group-/emg";
+
+    // Open in new tab
+    window.open(launchpassUrl, "_blank");
+  };
+
   return (
     <section className="bg-black font-sans  mt-[100px] px-4 md:px-8 py-16 relative overflow-hidden">
       {/* Faded Grid Lines Background with Gradient Fade */}
@@ -43,12 +51,16 @@ const HeroSection: React.FC = () => {
 
           {/* Subtitle */}
           <p className="text-white text-base md:text-lg lg:text-xl leading-relaxed">
-            Transform your mindset, build real skills, and unlock <br className="hidden md:block" /> your FULL
-            potential through direct mentorship.
+            Transform your mindset, build real skills, and unlock{" "}
+            <br className="hidden md:block" /> your FULL potential through
+            direct mentorship.
           </p>
 
           {/* Start Now Button */}
-          <button className="bg-[#3ED5A8] text-white px-2 py-2 rounded-[12px] text-sm md:text-lg font-semibold flex items-center space-x-3 hover:bg-[#35c49a] transition-colors duration-200">
+          <button
+            onClick={handleStartNow}
+            className="bg-[#3ED5A8] text-white px-2 py-2 rounded-[12px] text-sm md:text-lg font-semibold flex items-center space-x-3 hover:bg-[#35c49a] transition-colors duration-200"
+          >
             <span>Start Now</span>
             <Image
               src="/assets/arrow-right.svg"
