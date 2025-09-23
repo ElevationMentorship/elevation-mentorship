@@ -146,7 +146,7 @@ const Navbar: React.FC = () => {
             <div className="hidden md:block">
               <button
                 onClick={openModal}
-                className="bg-transparent border border-[#173D47] text-white px-6 py-2 rounded-full text-sm font-medium flex items-center space-x-2 backdrop-blur-[12px]"
+                className="bg-transparent cursor-pointer border border-[#173D47] text-white px-6 py-2 rounded-full text-sm font-medium flex items-center space-x-2 backdrop-blur-[12px]"
               >
                 <Image
                   src="/assets/phone-icon.svg"
@@ -499,7 +499,7 @@ const ContactForm: React.FC<{ onFormSubmit?: () => void }> = ({
           {/* Message */}
           <div>
             <label className="block text-white text-sm font-medium mb-2">
-              Write short message
+              Write a short message
             </label>
             <textarea
               name="message"
@@ -549,7 +549,7 @@ const ContactForm: React.FC<{ onFormSubmit?: () => void }> = ({
             <button
               type="submit"
               disabled={isSubmitting || !formData.areaOfInterest}
-              className="w-full bg-[#3ED5A8] text-white px-12 py-[12px] rounded-[12px] font-semibold hover:bg-[#35c49a] transition-colors duration-200 flex items-center justify-center space-x-3 disabled:opacity-50 disabled:cursor-not-allowed"
+              className="w-full bg-[#3ED5A8] cursor-pointer text-white px-12 py-[12px] rounded-[12px] font-semibold hover:bg-[#35c49a] transition-colors duration-200 flex items-center justify-center space-x-3 disabled:opacity-50 disabled:cursor-not-allowed"
             >
               {isSubmitting ? (
                 <>
@@ -628,7 +628,7 @@ const ContactForm: React.FC<{ onFormSubmit?: () => void }> = ({
                   </p>
                   <button
                     onClick={closeStatusModal}
-                    className="w-full bg-[#3ED5A8] text-white px-6 py-3 rounded-lg font-semibold hover:bg-[#35c49a] transition-colors duration-200"
+                    className="w-full bg-[#3ED5A8] cursor-pointer text-white px-6 py-3 rounded-lg font-semibold hover:bg-[#35c49a] transition-colors duration-200"
                   >
                     Close
                   </button>
