@@ -1,10 +1,13 @@
 "use client";
-
 import React, { useState, useEffect } from "react";
-import Image from "next/image";
-import Link from "next/link";
 import Navbar from "@/components/Navbar";
 import FooterSection from "@/components/FooterSection";
+
+declare global {
+  interface Window {
+    gtag?: (...args: any[]) => void;
+  }
+}
 
 interface VimeoThumbnail {
   width: number;
@@ -223,7 +226,7 @@ const TestimonialsPage: React.FC = () => {
     }));
 
     // Analytics tracking
-    if (typeof window !== "undefined" && (window as any).gtag) {
+    if (typeof window !== "undefined" && window.gtag) {
       (window as any).gtag("event", "video_play", {
         event_category: "testimonials_page",
         event_label: testimonialVideos[index].title,
