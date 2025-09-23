@@ -48,7 +48,7 @@ const WhatIOffer: React.FC = () => {
   ];
 
   return (
-    <section className="bg-black min-h-screen px-8 font-sans py-4 md:py-16 relative overflow-hidden">
+    <section className="bg-black min-h-screen md:px-8 px-4 font-sans py-4 md:py-16 relative overflow-hidden">
       {/* Background Blur Image */}
       <div className="absolute inset-0 flex items-center justify-center">
         <Image

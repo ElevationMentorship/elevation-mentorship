@@ -215,7 +215,7 @@ const TestimonialsSection: React.FC = () => {
   };
 
   return (
-    <section className="bg-black min-h-screen px-8 font-sans py-4 md:py-16">
+    <section className="bg-black min-h-screen px-4 md:px-8 font-sans py-4 md:py-16">
       <div className="max-w-7xl mx-auto">
         {/* Header */}
         <div className="text-center mb-16">

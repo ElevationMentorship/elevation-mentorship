@@ -67,7 +67,7 @@ const Navbar: React.FC = () => {
   return (
     <>
       <nav
-        className={`fixed top-0 left-0 right-0 z-40 px-8 py-4 transition-all duration-300 ${
+        className={`fixed top-0 left-0 right-0 z-40 px-4 py-2 md:px-8 md:py-4  transition-all duration-300 ${
           isScrolled ? "bg-black/95 backdrop-blur-md" : ""
         }`}
       >
@@ -89,7 +89,7 @@ const Navbar: React.FC = () => {
           ></div>
         </div>
 
-        <div className="max-w-7xl font-sans mx-auto bg-[#0A1B1A]/10 rounded-full border border-[#173D47] px-8 py-4 relative z-10">
+        <div className="max-w-7xl font-sans mx-auto bg-[#0A1B1A]/10 rounded-full border border-[#173D47] px-4 md:px-8 py-4 relative z-10">
           <div className="flex items-center justify-between">
             {/* Logo */}
             <div className="flex items-center">

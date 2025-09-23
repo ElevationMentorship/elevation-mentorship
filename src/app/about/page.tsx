@@ -55,7 +55,7 @@ const AboutPage: React.FC = () => {
   return (
     <>
       <Navbar />
-      <div className="bg-black font-sans mt-[100px] min-h-screen px-8 py-4 md:py-16">
+      <div className="bg-black font-sans mt-[100px] min-h-screen px-4 md:px-8 py-4 md:py-16">
         <div className="max-w-7xl mx-auto">
           {/* Page Title */}
           <div className="text-center mb-10 md:mb-20">
@@ -126,7 +126,7 @@ const AboutPage: React.FC = () => {
       </div>
 
       {/* Areas of Expertise Section */}
-      <section className="bg-black px-8 py-16">
+      <section className="bg-black px-4 py-4 md:px-8 md:py-16">
         <div className="max-w-7xl mx-auto">
           <h2 className="text-white text-center text-xl md:text-3xl lg:text-[40px] font-semibold mb-16">
             Areas Of Expertise

@@ -19,7 +19,7 @@ const FooterSection: React.FC = () => {
 
       <div className="relative  flex flex-col justify-between ">
         {/* Main Content */}
-        <div className="flex-1  relative flex items-center justify-center px-8 py-[43px] md:py-[80px]">
+        <div className="flex-1  relative flex items-center justify-center px-4 md:px-8 py-[43px] md:py-[80px]">
           <div className="absolute inset-0 opacity-30">
             <div
               className="w-full h-full"
@@ -58,15 +58,15 @@ const FooterSection: React.FC = () => {
         </div>
 
         {/* Footer Bottom */}
-        <div className=" px-8 py-[40px]">
+        <div className=" px-4 md:px-8 py-[40px]">
           <div className="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
             {/* Copyright */}
             <div className="text-white text-sm">
-              © Copyright 2022, All Rights Reserved
+              © Copyright 2025, All Rights Reserved
             </div>
 
             {/* Footer Links */}
-            <div className="flex space-x-8 text-sm">
+            <div className="flex gap-1 md:gap-0 md:space-x-8  text-sm">
               <a href="#" className="text-white  ">
                 Support
               </a>

@@ -64,7 +64,7 @@ const FAQSection: React.FC = () => {
   };
 
   return (
-    <section className="bg-black min-h-screen px-8 py-4 md:py-16 relative overflow-hidden">
+    <section className="bg-black min-h-screen px-4  md:px-8 py-4 md:py-16 relative overflow-hidden">
       {/* Background Blur Image at top center */}
       <div className="absolute top-0 left-1/2 transform -translate-x-1/2">
         <Image

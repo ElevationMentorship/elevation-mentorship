@@ -5,7 +5,7 @@ import Image from "next/image";
 
 const HeroSection: React.FC = () => {
   return (
-    <section className="bg-black font-sans  mt-[100px] px-8 py-16 relative overflow-hidden">
+    <section className="bg-black font-sans  mt-[100px] px-4 md:px-8 py-16 relative overflow-hidden">
       {/* Faded Grid Lines Background with Gradient Fade */}
       <div className="absolute inset-0">
         <div
