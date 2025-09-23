@@ -1,5 +1,5 @@
 "use client";
-import React from "react";
+import React, { useState } from "react";
 import Image from "next/image";
 import Navbar from "@/components/Navbar";
 import FooterSection from "@/components/FooterSection";
@@ -52,9 +52,23 @@ const AboutPage: React.FC = () => {
     },
   ];
 
+  const [isContactModalOpen, setIsContactModalOpen] = useState(false);
+
+  const openContactModal = () => {
+    setIsContactModalOpen(true);
+  };
+
+  const closeContactModal = () => {
+    setIsContactModalOpen(false);
+  };
+
   return (
     <>
-      <Navbar />
+      <Navbar
+        isContactModalOpen={isContactModalOpen}
+        onOpenContactModal={openContactModal}
+        onCloseContactModal={closeContactModal}
+      />
       <div className="bg-black font-sans mt-[100px] min-h-screen px-4 md:px-8 py-4 md:py-16">
         <div className="max-w-7xl mx-auto">
           {/* Page Title */}
@@ -211,7 +225,7 @@ const AboutPage: React.FC = () => {
         </div>
       </section>
 
-      <FooterSection />
+      <FooterSection onOpenContactModal={openContactModal} />
     </>
   );
 };

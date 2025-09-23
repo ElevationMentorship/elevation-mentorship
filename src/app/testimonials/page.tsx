@@ -32,6 +32,16 @@ const TestimonialsPage: React.FC = () => {
   const [loading, setLoading] = useState<{ [key: string]: boolean }>({});
   const [videoViews, setVideoViews] = useState<{ [key: string]: number }>({});
 
+  const [isContactModalOpen, setIsContactModalOpen] = useState(false);
+
+  const openContactModal = () => {
+    setIsContactModalOpen(true);
+  };
+
+  const closeContactModal = () => {
+    setIsContactModalOpen(false);
+  };
+
   // Extended testimonial videos array for the full page
   const testimonialVideos: TestimonialVideo[] = [
     {
@@ -243,7 +253,11 @@ const TestimonialsPage: React.FC = () => {
 
   return (
     <>
-      <Navbar />
+      <Navbar
+        isContactModalOpen={isContactModalOpen}
+        onOpenContactModal={openContactModal}
+        onCloseContactModal={closeContactModal}
+      />{" "}
       <div className="bg-black min-h-screen mt-[80px] px-4 md:px-8 font-sans py-8 md:py-16">
         <div className="max-w-7xl mx-auto">
           {/* Header */}
@@ -407,7 +421,7 @@ const TestimonialsPage: React.FC = () => {
           </>
         )}
       </div>
-      <FooterSection />
+      <FooterSection onOpenContactModal={openContactModal} />
     </>
   );
 };
