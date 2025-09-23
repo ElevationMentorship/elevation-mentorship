@@ -47,6 +47,14 @@ const WhatIOffer: React.FC = () => {
     },
   ];
 
+  const handleStartNow = () => {
+    const launchpassUrl =
+      "https://www.launchpass.com/emg---elevation-mentorship-group-/emg";
+
+    // Open in new tab
+    window.open(launchpassUrl, "_blank");
+  };
+
   return (
     <section className="bg-black min-h-screen md:px-8 px-4 font-sans py-4 md:py-16 relative overflow-hidden">
       <div className="max-w-7xl mx-auto relative z-10">
@@ -104,7 +112,10 @@ const WhatIOffer: React.FC = () => {
           ))}
         </div>
         <div className="text-center mt-10 md:mt-[92px]">
-          <button className="bg-transparent text-sm md:text-base border cursor-pointer border-[#3ED5A8] text-[#3ED5A8] p-[12px] rounded-full  font-semibold flex items-center space-x-2 mx-auto">
+          <button
+            onClick={handleStartNow}
+            className="bg-transparent text-sm md:text-base border cursor-pointer border-[#3ED5A8] text-[#3ED5A8] p-[12px] rounded-full  font-semibold flex items-center space-x-2 mx-auto"
+          >
             <span>START NOW</span>
             <Image
               src="/assets/arrow-right-btn.svg"
