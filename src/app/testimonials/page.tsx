@@ -279,7 +279,6 @@ const TestimonialsPage: React.FC = () => {
             {testimonialVideos.map((video, index) => {
               const isLoading = loading[video.vimeoId];
               const data = videoData[video.vimeoId];
-              const viewCount = videoViews[video.vimeoId] || 0;
 
               return (
                 <div
@@ -334,12 +333,6 @@ const TestimonialsPage: React.FC = () => {
                           <p className="text-gray-300 text-xs mb-2 line-clamp-1">
                             {video.subtitle}
                           </p>
-
-                          {viewCount > 0 && (
-                            <p className="text-[#3ED5A8] text-xs">
-                              {viewCount} view{viewCount !== 1 ? "s" : ""}
-                            </p>
-                          )}
                         </div>
 
                         {/* Hover Effect Border */}
