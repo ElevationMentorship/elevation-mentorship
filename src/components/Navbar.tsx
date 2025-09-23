@@ -254,17 +254,6 @@ const Navbar: React.FC = () => {
           {/* Modal Content - Fixed positioning and better centering */}
           <div className="fixed inset-0 font-sans flex items-start sm:items-center justify-center z-[90] p-4 overflow-y-auto">
             <div className="bg-black/90 border border-[#173D47] rounded-[12px] w-full max-w-2xl relative overflow-hidden my-4 sm:my-8">
-              {/* Background Blur at top center */}
-              <div className="absolute top-0 left-1/2 transform -translate-x-1/2 -translate-y-1/2">
-                <Image
-                  src="/assets/modal-blur-background.png"
-                  alt="Background Blur"
-                  width={400}
-                  height={300}
-                  className="opacity-20"
-                />
-              </div>
-
               {/* Modal Header with Title and Close Button */}
               <div className="flex items-center justify-between px-4 pt-8 pb-6 relative z-10 border-b border-[#173D47]">
                 <h2 className="text-white text-3xl lg:text-4xl font-bold">
@@ -525,7 +514,10 @@ const ContactForm: React.FC<{ onFormSubmit?: () => void }> = ({
 
           {/* Contact Info */}
           <div className="flex border-t border-white/28 flex-col sm:flex-row items-start sm:items-center justify-between gap-6 py-6">
-            <div className="flex flex-col items-start space-y-1 text-gray-300">
+            <a
+              href="mailto:Info@elevationmentorship.co.uk"
+              className="flex flex-col items-start space-y-1 text-gray-300 hover:text-[#3ED5A8] transition-colors duration-200 cursor-pointer"
+            >
               <Image
                 src="/assets/mail-icon.svg"
                 alt="Email"
@@ -534,8 +526,13 @@ const ContactForm: React.FC<{ onFormSubmit?: () => void }> = ({
                 className="w-5 h-5"
               />
               <span className="text-sm">Info@elevationmentorship.co.uk</span>
-            </div>
-            <div className="flex flex-col items-start space-y-1 text-gray-300">
+            </a>
+            <a
+              href="https://www.instagram.com/elevation_mentorship_group?igsh=Zjg2ZHdxcmxkaGhs"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex flex-col items-start space-y-1 text-gray-300 hover:text-[#3ED5A8] transition-colors duration-200 cursor-pointer"
+            >
               <Image
                 src="/assets/instagram-icon.svg"
                 alt="Instagram"
@@ -544,7 +541,7 @@ const ContactForm: React.FC<{ onFormSubmit?: () => void }> = ({
                 className="w-5 h-5"
               />
               <span className="text-sm">@elevation_mentorship_group</span>
-            </div>
+            </a>
           </div>
 
           {/* Submit Button */}
@@ -626,8 +623,8 @@ const ContactForm: React.FC<{ onFormSubmit?: () => void }> = ({
                     Message Sent Successfully!
                   </h3>
                   <p className="text-gray-300">
-                    Thank you for contacting us. We&apos;ll get back to you within
-                    24-48 hours.
+                    Thank you for contacting us. We&apos;ll get back to you
+                    within 24-48 hours.
                   </p>
                   <button
                     onClick={closeStatusModal}
