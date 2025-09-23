@@ -5,7 +5,6 @@ import Image from "next/image";
 import Link from "next/link";
 import BookCallButton from "./BookCallButton";
 
-
 interface VimeoThumbnail {
   width: number;
   height: number;
@@ -36,20 +35,21 @@ const TestimonialsSection: React.FC = () => {
 
   const testimonialVideos: TestimonialVideo[] = [
     {
-      vimeoId: "1120754612",
+      vimeoId: "1120757555",
       alt: "Testimonial 1",
-      title: "COMPILATION",
+      title: "LUKE",
     },
     {
-      vimeoId: "1120757250",
-      alt: "Testimonial 2",
-      title: "Paul's Success Journey",
+      vimeoId: "1120753366",
+      alt: "Testimonial 9",
+      title: "Tom. K",
     },
     {
-      vimeoId: "1120756999",
-      alt: "Testimonial 3",
-      title: "Char's Life Change",
+      vimeoId: "1120756833",
+      alt: "Testimonial 5",
+      title: "SONYA",
     },
+  
   ];
 
   // Fetch Vimeo video data using oEmbed API (no auth required for public videos)
@@ -182,7 +182,6 @@ const TestimonialsSection: React.FC = () => {
       ...prev,
       [videoId]: (prev[videoId] || 0) + 1,
     }));
-
   };
 
   const handleVideoClose = () => {
@@ -295,12 +294,6 @@ const TestimonialsSection: React.FC = () => {
                         <h3 className="text-white font-semibold text-base mb-1">
                           {video.title}
                         </h3>
-
-                        {viewCount > 0 && (
-                          <p className="text-[#3ED5A8] text-xs">
-                            {viewCount} view{viewCount !== 1 ? "s" : ""}
-                          </p>
-                        )}
                       </div>
 
                       {/* Hover Effect Border */}

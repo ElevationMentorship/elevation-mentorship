@@ -3,8 +3,6 @@ import React, { useState, useEffect } from "react";
 import Navbar from "@/components/Navbar";
 import FooterSection from "@/components/FooterSection";
 
-
-
 interface VimeoThumbnail {
   width: number;
   height: number;
@@ -37,29 +35,16 @@ const TestimonialsPage: React.FC = () => {
   // Extended testimonial videos array for the full page
   const testimonialVideos: TestimonialVideo[] = [
     {
-      vimeoId: "1120754612",
-      alt: "Testimonial 8",
-      title: "COMPILATION",
-      subtitle: "",
-    },
-
-    {
-      vimeoId: "1120757250",
-      alt: "Testimonial 2",
-      title: "PAUL. W",
-      subtitle: "BUSINESS OWNER",
+      vimeoId: "1120757555",
+      alt: "Testimonial 1",
+      title: "LUKE",
+      subtitle: "BUSINESS OWNER/TRADER",
     },
     {
-      vimeoId: "1120756999",
-      alt: "Testimonial 3",
-      title: "CHAR. W",
-      subtitle: "BRAND OWNER, BUSINESS OWNER",
-    },
-    {
-      vimeoId: "1120756689",
-      alt: "Testimonial 4",
-      title: "CHRIS ALLEN",
-      subtitle: "MMA FIGHT PROMOTER, CO-FOUDER BFS OWNER",
+      vimeoId: "1120753366",
+      alt: "Testimonial 9",
+      title: "Tom. K",
+      subtitle: "PROFESSIONAL KICK-BOXER",
     },
     {
       vimeoId: "1120756833",
@@ -80,16 +65,29 @@ const TestimonialsPage: React.FC = () => {
       subtitle: "BOXER",
     },
     {
-      vimeoId: "1120757555",
-      alt: "Testimonial 1",
-      title: "LUKE",
-      subtitle: "BUSINESS OWNER/TRADER",
+      vimeoId: "1120756689",
+      alt: "Testimonial 4",
+      title: "CHRIS ALLEN",
+      subtitle: "MMA FIGHT PROMOTER, CO-FOUDER BFS OWNER",
     },
     {
-      vimeoId: "1120753366",
-      alt: "Testimonial 9",
-      title: "Tom. K",
-      subtitle: "PROFESSIONAL KICK-BOXER",
+      vimeoId: "1120757250",
+      alt: "Testimonial 2",
+      title: "PAUL. W",
+      subtitle: "BUSINESS OWNER",
+    },
+    {
+      vimeoId: "1120756999",
+      alt: "Testimonial 3",
+      title: "CHAR. W",
+      subtitle: "BRAND OWNER, BUSINESS OWNER",
+    },
+
+    {
+      vimeoId: "1120754612",
+      alt: "Testimonial 8",
+      title: "COMPILATION",
+      subtitle: "",
     },
   ];
 
@@ -220,8 +218,6 @@ const TestimonialsPage: React.FC = () => {
       ...prev,
       [videoId]: (prev[videoId] || 0) + 1,
     }));
-
-  
   };
 
   const handleVideoClose = () => {

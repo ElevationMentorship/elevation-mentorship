@@ -12,7 +12,7 @@ const AboutPage: React.FC = () => {
       items: [
         "8+ years of successful trading experience",
         "CEO of Tradex Capital",
-        "Expert in FX and Futures markets",
+        "Experienced in FX and Futures markets",
       ],
     },
     {
@@ -20,7 +20,7 @@ const AboutPage: React.FC = () => {
       title: "E-COMMERCE & BRAND MANAGEMENT",
       items: [
         "Multi-brand portfolio owner",
-        "5+ years as industry educator",
+        "6+ years as industry educator",
         "Successful brand development",
       ],
     },
@@ -28,10 +28,13 @@ const AboutPage: React.FC = () => {
       icon: "/assets/combat-sports-icon.svg",
       title: "COMBAT SPORTS",
       items: [
-        "Former K1 & Boxing Champion",
-        "Owner of Evolution Combat Academy",
-        "Successful Fight Promoter",
-        "Co-fouder of Combat Tix"
+        "Former Kickboxing & Boxing Champion",
+        "Gym Owner of Evolution Combat Academy",
+        "Successful Fight Promoter & Manager",
+        "Owner of successful MMA/Combat Sport shows such as BLOODLINE FIGHT SERIES, ECMMA, EFL",
+        "Combat Sport Coach (Professional and amateur athletes). Coached multiple UK ranked No.1 fighters, including World, European, British, English, and Area champions",
+        "Manager of fighters across the UK & Europe",
+        "Co-fouder of Combat Tix",
       ],
     },
     {
@@ -45,11 +48,7 @@ const AboutPage: React.FC = () => {
     {
       icon: "/assets/music-icon.svg",
       title: "MUSIC",
-      items: [
-        "DJ",
-        "Producer",
-        "Events Organizer",
-      ],
+      items: ["DJ", "Producer", "Events Organizer"],
     },
   ];
 
@@ -102,11 +101,12 @@ const AboutPage: React.FC = () => {
                   With years of experience teaching and mentoring across diverse
                   fields, marked by a high success rate in student
                   transformation, I am now poised to broaden my impact and
-                  extend the reach of my work. Let&apos;s turn setbacks to purpose
-                  driven action, embrace discipline, with consistent practical
-                  steps that create lasting momentum in every aspect of your
-                  life. You&apos;re not lost, you just need purpose and guidance. I&apos;m
-                  here to show you how to turn everything around!
+                  extend the reach of my work. Let&apos;s turn setbacks to
+                  purpose driven action, embrace discipline, with consistent
+                  practical steps that create lasting momentum in every aspect
+                  of your life. You&apos;re not lost, you just need purpose and
+                  guidance. I&apos;m here to show you how to turn everything
+                  around!
                 </p>
               </div>
             </div>
@@ -132,16 +132,13 @@ const AboutPage: React.FC = () => {
           <h2 className="text-white text-center text-xl md:text-3xl lg:text-[40px] font-semibold mb-16">
             Areas Of Expertise
           </h2>
-          
+
           {/* Container for the custom layout */}
           <div className="space-y-12">
             {/* First row - 3 cards */}
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-8">
               {offerings.slice(0, 3).map((offering, index) => (
-                <div
-                  key={index}
-                  className="bg-transparent p-5  space-y-3"
-                >
+                <div key={index} className="bg-transparent p-5  space-y-3">
                   {/* Icon */}
                   <div className="w-12 h-12 rounded-full border border-[#404047] flex items-center justify-center">
                     <Image
@@ -194,7 +191,7 @@ const AboutPage: React.FC = () => {
                   {/* Title */}
                   <h3 className="text-white text-lg font-medium leading-tight">
                     {offering.title}
-                  </h3> 
+                  </h3>
 
                   {/* Items List */}
                   <ul className="space-y-1">
