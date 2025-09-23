@@ -595,7 +595,6 @@ const ContactForm: React.FC<{ onFormSubmit?: () => void }> = ({
         </form>
       </div>
 
-      {/* Success/Error Status Modal */}
       {showStatusModal && (
         <>
           <div
