@@ -4,7 +4,13 @@ import React, { useState, useEffect } from "react";
 import Image from "next/image";
 import BookCallButton from "./BookCallButton";
 
-const FooterSection: React.FC = () => {
+interface FooterSectionProps {
+  onOpenContactModal: () => void;
+}
+
+const FooterSection: React.FC<FooterSectionProps> = ({
+  onOpenContactModal,
+}) => {
   const [activeModal, setActiveModal] = useState<"terms" | "privacy" | null>(
     null
   );
@@ -108,9 +114,12 @@ const FooterSection: React.FC = () => {
 
               {/* Footer Links */}
               <div className="flex space-x-2 md:space-x-8 text-sm">
-                <a href="#" className="text-white">
+                <button
+                  onClick={onOpenContactModal}
+                  className="text-white cursor-pointer hover:text-[#3ED5A8] transition-colors duration-200"
+                >
                   Support
-                </a>
+                </button>
                 <button
                   onClick={() => openModal("terms")}
                   className="text-white cursor-pointer hover:text-[#3ED5A8] transition-colors duration-200"

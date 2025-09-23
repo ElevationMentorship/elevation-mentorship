@@ -4,11 +4,20 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import Image from "next/image";
 
-const Navbar: React.FC = () => {
+interface NavbarProps {
+  isContactModalOpen: boolean;
+  onOpenContactModal: () => void;
+  onCloseContactModal: () => void;
+}
+
+const Navbar: React.FC<NavbarProps> = ({
+  isContactModalOpen,
+  onOpenContactModal,
+  onCloseContactModal,
+}) => {
   const pathname = usePathname();
   const [isScrolled, setIsScrolled] = useState(false);
   const [isSidebarOpen, setIsSidebarOpen] = useState(false);
-  const [isModalOpen, setIsModalOpen] = useState(false);
 
   const navItems = [
     { name: "Home", href: "/" },
@@ -28,19 +37,7 @@ const Navbar: React.FC = () => {
     setIsSidebarOpen(false);
   };
 
-  const openModal = () => {
-    if (isSidebarOpen) {
-      setIsSidebarOpen(false);
-    }
-    setIsModalOpen(true);
-    // Reset scroll position when opening modal
-    document.body.scrollTop = 0;
-    document.documentElement.scrollTop = 0;
-  };
 
-  const closeModal = () => {
-    setIsModalOpen(false);
-  };
 
   useEffect(() => {
     const handleScroll = () => {
@@ -53,7 +50,7 @@ const Navbar: React.FC = () => {
 
   // Prevent body scroll when sidebar or modal is open
   useEffect(() => {
-    if (isSidebarOpen || isModalOpen) {
+    if (isSidebarOpen || isContactModalOpen) {
       document.body.style.overflow = "hidden";
     } else {
       document.body.style.overflow = "unset";
@@ -62,7 +59,7 @@ const Navbar: React.FC = () => {
     return () => {
       document.body.style.overflow = "unset";
     };
-  }, [isSidebarOpen, isModalOpen]);
+  }, [isSidebarOpen, isContactModalOpen]);
 
   return (
     <>
@@ -93,13 +90,15 @@ const Navbar: React.FC = () => {
           <div className="flex items-center justify-between">
             {/* Logo */}
             <div className="flex items-center">
-              <Image
-                src="/assets/logo.png"
-                alt="Elevation Logo"
-                width={159}
-                height={40}
-                className="h-10 w-auto"
-              />
+              <Link href="/">
+                <Image
+                  src="/assets/logo.png"
+                  alt="Elevation Logo"
+                  width={159}
+                  height={40}
+                  className="h-10 w-auto cursor-pointer"
+                />
+              </Link>
             </div>
 
             {/* Navigation Links - Desktop */}
@@ -145,7 +144,7 @@ const Navbar: React.FC = () => {
             {/* Contact Us Button - Desktop Only */}
             <div className="hidden md:block">
               <button
-                onClick={openModal}
+                onClick={onOpenContactModal}
                 className="bg-transparent cursor-pointer border border-[#173D47] text-white px-6 py-2 rounded-full text-sm font-medium flex items-center space-x-2 backdrop-blur-[12px]"
               >
                 <Image
@@ -227,7 +226,7 @@ const Navbar: React.FC = () => {
         {/* Contact Button in Sidebar */}
         <div className="px-6 py-4 border-t border-[#173D47]">
           <button
-            onClick={openModal}
+            onClick={onOpenContactModal}
             className="w-full bg-transparent border border-[#173D47] text-white px-6 py-3 rounded-full text-sm font-medium flex items-center justify-center space-x-2 backdrop-blur-[12px] hover:bg-[#173D47]/20 transition-colors duration-200"
           >
             <Image
@@ -243,12 +242,12 @@ const Navbar: React.FC = () => {
       </div>
 
       {/* Contact Modal */}
-      {isModalOpen && (
+      {isContactModalOpen && (
         <>
           {/* Modal Overlay */}
           <div
             className="fixed inset-0 bg-black/70 backdrop-blur-sm z-[80]"
-            onClick={closeModal}
+            onClick={onCloseContactModal}
           />
 
           {/* Modal Content - Fixed positioning and better centering */}
@@ -260,7 +259,7 @@ const Navbar: React.FC = () => {
                   Contact Form
                 </h2>
                 <button
-                  onClick={closeModal}
+                  onClick={onCloseContactModal}
                   className="text-white cursor-pointer hover:text-[#3ED5A8] transition-colors duration-200 flex-shrink-0"
                 >
                   <svg
@@ -281,7 +280,7 @@ const Navbar: React.FC = () => {
 
               {/* Form Content - Better height management */}
               <div className="px-4 pb-8 relative z-10 max-h-[70vh] overflow-y-auto custom-scrollbar">
-                <ContactForm onFormSubmit={closeModal} />
+                <ContactForm onFormSubmit={onCloseContactModal} />
               </div>
             </div>
           </div>
