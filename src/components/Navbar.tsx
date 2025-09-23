@@ -598,7 +598,6 @@ const ContactForm: React.FC<{ onFormSubmit?: () => void }> = ({
       {/* Success/Error Status Modal */}
       {showStatusModal && (
         <>
-          {/* Modal Overlay */}
           <div
             className="fixed inset-0 bg-black/80 backdrop-blur-sm z-[80]"
             onClick={closeStatusModal}
