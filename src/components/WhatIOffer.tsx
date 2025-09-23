@@ -6,15 +6,6 @@ import Image from "next/image";
 const WhatIOffer: React.FC = () => {
   const offerings = [
     {
-      icon: "/assets/networking-icon.svg",
-      title: "Networking, Community & Specialized Mentoring",
-      items: [
-        "International Networking & Connections",
-        "Community Interest / Youth Work Programs",
-        "Combat Sports & Coaching Mentoring",
-      ],
-    },
-    {
       icon: "/assets/personal-development-icon.svg",
       title: "Personal Development & Wellbeing",
       items: [
@@ -43,6 +34,15 @@ const WhatIOffer: React.FC = () => {
         "Digital Passive Income Education",
         "Business Learning & Development",
         "Marketing",
+      ],
+    },
+    {
+      icon: "/assets/networking-icon.svg",
+      title: "Networking, Community & Specialized Mentoring",
+      items: [
+        "International Networking & Connections",
+        "Community Interest / Youth Work Programs",
+        "Combat Sports & Coaching Mentoring",
       ],
     },
   ];
