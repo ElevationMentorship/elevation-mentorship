@@ -31,6 +31,7 @@ const AboutPage: React.FC = () => {
         "Former K1 & Boxing Champion",
         "Owner of Evolution Combat Academy",
         "Successful Fight Promoter",
+        "Co-fouder of Combat Tix"
       ],
     },
     {
@@ -135,7 +136,7 @@ const AboutPage: React.FC = () => {
           {/* Container for the custom layout */}
           <div className="space-y-12">
             {/* First row - 3 cards */}
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-8">
               {offerings.slice(0, 3).map((offering, index) => (
                 <div
                   key={index}
@@ -173,7 +174,7 @@ const AboutPage: React.FC = () => {
             </div>
 
             {/* Second row - 2 cards centered */}
-            <div className="flex flex-col md:flex-row justify-center gap-8 max-w-4xl mx-auto">
+            <div className="flex flex-col md:flex-row justify-center gap-4 md:gap-8 max-w-4xl mx-auto">
               {offerings.slice(3, 5).map((offering, index) => (
                 <div
                   key={index + 3}
