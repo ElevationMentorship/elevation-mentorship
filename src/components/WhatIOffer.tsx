@@ -31,7 +31,7 @@ const WhatIOffer: React.FC = () => {
         "Trading & Financial Market Education",
         "Money Management",
         "Property Investment",
-        "Investment Strategies Beyond Trading (Real Estate, Funds, Crypto)",
+        "Investment Education Beyond Trading (Real Estate, Funds, Crypto)",
       ],
     },
     {
@@ -49,17 +49,6 @@ const WhatIOffer: React.FC = () => {
 
   return (
     <section className="bg-black min-h-screen md:px-8 px-4 font-sans py-4 md:py-16 relative overflow-hidden">
-      {/* Background Blur Image */}
-      <div className="absolute inset-0 flex items-center justify-center">
-        <Image
-          src="/assets/blur-background.png"
-          alt="Background Blur"
-          width={800}
-          height={600}
-          className="opacity-30"
-        />
-      </div>
-
       <div className="max-w-7xl mx-auto relative z-10">
         {/* Header */}
         <div className="text-center mb-2 md:mb-16">
