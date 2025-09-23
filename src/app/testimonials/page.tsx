@@ -3,11 +3,7 @@ import React, { useState, useEffect } from "react";
 import Navbar from "@/components/Navbar";
 import FooterSection from "@/components/FooterSection";
 
-declare global {
-  interface Window {
-    gtag?: (...args: any[]) => void;
-  }
-}
+
 
 interface VimeoThumbnail {
   width: number;
@@ -225,14 +221,7 @@ const TestimonialsPage: React.FC = () => {
       [videoId]: (prev[videoId] || 0) + 1,
     }));
 
-    // Analytics tracking
-    if (typeof window !== "undefined" && window.gtag) {
-      (window as any).gtag("event", "video_play", {
-        event_category: "testimonials_page",
-        event_label: testimonialVideos[index].title,
-        custom_parameter_1: videoId,
-      });
-    }
+  
   };
 
   const handleVideoClose = () => {

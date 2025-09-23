@@ -5,11 +5,6 @@ import Image from "next/image";
 import Link from "next/link";
 import BookCallButton from "./BookCallButton";
 
-declare global {
-  interface Window {
-    gtag?: (...args: any[]) => void;
-  }
-}
 
 interface VimeoThumbnail {
   width: number;
@@ -188,14 +183,6 @@ const TestimonialsSection: React.FC = () => {
       [videoId]: (prev[videoId] || 0) + 1,
     }));
 
-    // Analytics tracking (replace with your analytics service)
-    if (typeof window !== "undefined" && window.gtag) {
-      window.gtag("event", "video_play", {
-        event_category: "testimonials",
-        event_label: testimonialVideos[index].title,
-        custom_parameter_1: videoId,
-      });
-    }
   };
 
   const handleVideoClose = () => {

@@ -4,12 +4,6 @@ import React, { useState } from "react";
 import Image from "next/image";
 import CalModal from "./CalModal";
 
-declare global {
-  interface Window {
-    gtag?: (...args: any[]) => void;
-  }
-}
-
 interface BookCallButtonProps {
   calLink: string;
   variant?: "primary" | "secondary" | "outline";
@@ -39,14 +33,6 @@ const BookCallButton: React.FC<BookCallButtonProps> = ({
 
   const handleBookCallClick = () => {
     setShowCalendar(true);
-
-    // Analytics tracking
-    if (typeof window !== "undefined" && window.gtag) {
-      (window as any).gtag("event", "book_call_clicked", {
-        event_category: "conversion",
-        event_label: calLink,
-      });
-    }
   };
 
   const handleCalendarClose = (event: React.MouseEvent) => {
