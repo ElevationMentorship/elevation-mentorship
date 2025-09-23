@@ -66,7 +66,7 @@ const FooterSection: React.FC = () => {
             </div>
 
             {/* Footer Links */}
-            <div className="flex gap-1 md:gap-0 md:space-x-8  text-sm">
+            <div className="flex space-x-2 md:space-x-8  text-sm">
               <a href="#" className="text-white  ">
                 Support
               </a>
