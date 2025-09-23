@@ -49,7 +49,6 @@ const TestimonialsSection: React.FC = () => {
       alt: "Testimonial 5",
       title: "SONYA",
     },
-  
   ];
 
   // Fetch Vimeo video data using oEmbed API (no auth required for public videos)
@@ -367,7 +366,7 @@ const TestimonialsSection: React.FC = () => {
 
                 {/* Vimeo Embed */}
                 <iframe
-                  src={`https://player.vimeo.com/video/${testimonialVideos[playingVideo].vimeoId}?h=0&autoplay=1&title=0&byline=0&portrait=0&speed=0&badge=0&autopause=0&player_id=0&app_id=58479&color=3ED5A8`}
+                  src={`https://player.vimeo.com/video/${testimonialVideos[playingVideo].vimeoId}?h=0&autoplay=1&muted=0&title=0&byline=0&portrait=0&speed=0&badge=0&autopause=0&player_id=0&app_id=58479&color=3ED5A8`}
                   frameBorder="0"
                   allow="autoplay; fullscreen; picture-in-picture"
                   allowFullScreen
@@ -392,7 +391,7 @@ const TestimonialsSection: React.FC = () => {
               </div>
 
               {/* Keyboard Hint */}
-              <div className="absolute -bottom-8 left-1/2 transform -translate-x-1/2 text-gray-400 text-sm">
+              <div className="absolute hidden md:block -bottom-8 left-1/2 transform -translate-x-1/2 text-gray-400 text-sm">
                 Press ESC to close
               </div>
             </div>
