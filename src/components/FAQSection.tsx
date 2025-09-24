@@ -8,54 +8,29 @@ const FAQSection: React.FC = () => {
 
   const faqs = [
     {
-      question: "What is EMG – Elevation Mentorship Group?",
-      answer:
-        "EMG is a mentorship and coaching platform dedicated to helping people grow in life",
-    },
-    {
-      question: "Who can join EMG?",
-      answer:
-        "Anyone who is committed to personal growth and transformation can join EMG.",
-    },
-    {
       question: "What services do you provide?",
       answer:
-        "We provide comprehensive mentorship services including personal development, business coaching, financial education, and wellness guidance.",
+        "I provide comprehensive mentorship services including personal development, business coaching, financial education, and wellness guidance.",
     },
     {
       question: "How do I get started?",
       answer:
-        "You can get started by booking a free consultation call where we'll discuss your goals and how EMG can help you achieve them.",
+        "You can get started by booking a free consultation call where I’ll discuss your goals and how EMG can help you achieve them.",
     },
     {
       question: "Do I need prior experience?",
       answer:
-        "No prior experience is needed. Our mentorship program is designed to meet you where you are and help you grow from there.",
-    },
-    {
-      question: "Is EMG only about business and money?",
-      answer:
-        "No, EMG covers all aspects of life including personal development, relationships, health, wellness, and much more beyond just business and finance.",
+        "No prior experience is needed. My mentorship program is designed to meet you where you are and help you grow from there.",
     },
     {
       question: "How does the mentorship work?",
       answer:
-        "Our mentorship includes one-on-one sessions, group coaching, educational resources, and ongoing support to help you achieve your goals.",
-    },
-    {
-      question: "Can I connect with other members?",
-      answer:
-        "Yes, EMG has a strong community aspect where members can connect, share experiences, and support each other's growth journey.",
+        "My mentorship includes an active multi topic community, one-on-one sessions, direct coaching, educational resources, and ongoing support to help you achieve your goals.",
     },
     {
       question: "Is there support if I get stuck?",
       answer:
-        "Absolutely! We provide ongoing support through direct mentoring, community help, and additional resources whenever you need assistance.",
-    },
-    {
-      question: "Why should I join EMG?",
-      answer:
-        "EMG offers personalized mentorship, proven strategies, and a supportive community to help you achieve lasting transformation in all areas of your life.",
+        "Absolutely! I provide ongoing support through direct mentoring, community help, and additional resources whenever you need assistance.",
     },
   ];
 
